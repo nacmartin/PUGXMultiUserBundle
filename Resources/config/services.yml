@@ -17,7 +17,7 @@ services:
     #simply wrap
     pugx_multi_user.registration_controller:
       class: FOS\UserBundle\Controller\RegistrationController
-            arguments: ["@event_dispatcher", "@fos_user.registration.form.factory", "@fos_user.user_manager", "@security.token_storage"]
+      arguments: ["@event_dispatcher", "@fos_user.registration.form.factory", "@fos_user.user_manager", "@security.token_storage"]
       
     pugx_multi_user.profile_controller:
       class: FOS\UserBundle\Controller\ProfileController
