@@ -45,7 +45,7 @@ class FormFactory implements FactoryInterface
             return $this->forms[$name];
         }
 
-        if (\Symfony\Component\HttpKernel\Kernel::MAJOR_VERSION >= 3) {
+        if (\Symfony\Component\HttpKernel\Kernel::MAJOR_VERSION >= 3 && \Symfony\Component\HttpKernel\Kernel::MINOR_VERSION < 3.4) {
             $form = $this->formFactory->createNamed(
                 $name,
                 get_class($type),
